@@ -297,6 +297,11 @@
 
   /* PRICING */
   .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+  .pricing-grid.two-cols{grid-template-columns:repeat(2,1fr);max-width:980px;margin:0 auto}
+  @media (max-width:900px){
+    .pricing-grid.two-cols{grid-template-columns:1fr;max-width:100%}
+    .pricing-notes > div{grid-template-columns:1fr !important;gap:20px !important}
+  }
   .price-card{
     background:#fff;border:1px solid var(--line);border-radius:18px;
     padding:36px 28px;display:flex;flex-direction:column;
@@ -610,53 +615,71 @@
 <section id="cenik">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Balíčky a ceny</span>
-      <h2 style="margin-top:10px">Transparentní ceník bez skrytých poplatků</h2>
-      <p>Vyberte si balíček podle rozsahu spolupráce. Cena je měsíční, neplatí se žádné dodatečné poplatky.</p>
+      <span class="eyebrow">Ceník a balíčky</span>
+      <h2 style="margin-top:10px">Jasná a transparentní cenová struktura</h2>
+      <p>Žádná nepřehledná vata. Zvolte si balíček podle toho, zda již koncesi máte, nebo ji potřebujete vyřídit od A do Z.</p>
     </div>
 
-    <div class="pricing-grid">
-      <!-- ZÁKLAD -->
+    <div class="pricing-grid two-cols">
+      <!-- BALÍČEK 1: GARANT -->
       <div class="price-card reveal">
-        <div class="price-name">Základ</div>
+        <div class="price-name">Garant (Základ)</div>
+        <div style="font-size:13px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px;">
+          Vstupní poplatek: <strong style="color:var(--navy)">0 Kč</strong> (mám vyřízeno)
+        </div>
         <div class="price-amount">2 500 Kč<span> / měsíc</span></div>
-        <p class="price-desc">Pro začínající dopravce, kteří potřebují splnit podmínku odborné způsobilosti.</p>
+        <p class="price-desc">Pro dopravce, který již koncesi i Eurolicenci má a hledá pouze nového spolehlivého garanta.</p>
         <ul class="price-features">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Funkce odpovědného zástupce</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Smlouva o výkonu funkce</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Potvrzení pro úřad</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Korespondenční vyřízení</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Výkon funkce odpovědného zástupce (zák. č. 111/1994 Sb.)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Smlouva o výkonu funkce + potvrzení pro úřad</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Držení pohotovosti pro úřady</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Roční kontrola plnění podmínek (finanční způsobilost)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vyřízení korespondenčně po celé ČR</li>
         </ul>
-        <a href="#kontakt" class="btn btn-primary" style="background:#fff;color:var(--navy);box-shadow:none;border:1.5px solid var(--navy)">Mám zájem</a>
+        <a href="#kontakt" class="btn btn-primary" style="background:#fff;color:var(--navy);box-shadow:none;border:1.5px solid var(--navy)">Mám zájem o garanta</a>
       </div>
 
-      <!-- STANDARD -->
+      <!-- BALÍČEK 2: KONCESE NA KLÍČ + GARANT -->
       <div class="price-card featured reveal">
-        <span class="featured-tag">Nejoblíbenější</span>
-        <div class="price-name">Standard</div>
-        <div class="price-amount">3 500 Kč<span> / měsíc</span></div>
-        <p class="price-desc">Komplexní balíček pro dopravce, kteří chtějí mít jistotu i u Eurolicence.</p>
+        <span class="featured-tag">Kompletní řešení</span>
+        <div class="price-name">Koncese na klíč + Garant</div>
+        <div style="font-size:13px; font-weight:700; color:#cfd6e4; text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px;">
+          Jednorázově vyřízení: <strong style="color:var(--gold)">5 000 Kč</strong>
+        </div>
+        <div class="price-amount">2 500 Kč<span> / měsíc</span></div>
+        <p class="price-desc">Pro nové dopravce, kteří potřebují kompletně vyřídit koncesi i Eurolicenci od A do Z a zajistit garanta.</p>
         <ul class="price-features">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vše ze ZÁKLADu</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pomoc s žádostí o Eurolicenci</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Průběžné konzultace</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kontrola podkladů před zápisem</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vše z balíčku Garant</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kompletní administrativa pro vydání koncese a Eurolicence</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Příprava podkladů pro Živnostenský i Dopravní úřad</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Asistence při prokazování finanční způsobilosti</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Podpora a konzultace v průběhu celého schvalování</li>
         </ul>
-        <a href="#kontakt" class="btn btn-primary">Mám zájem</a>
+        <a href="#kontakt" class="btn btn-primary">Chci koncesi na klíč</a>
       </div>
+    </div>
 
-      <!-- PREMIUM -->
-      <div class="price-card reveal">
-        <div class="price-name">Premium</div>
-        <div class="price-amount">5 000 Kč<span> / měsíc</span></div>
-        <p class="price-desc">Pro klienty, kteří potřebují vše vyřídit rychle a s prioritní péčí.</p>
-        <ul class="price-features">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vše ze STANDARDu</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Expresní vyřízení do 5 dnů</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Prioritní telefonická podpora</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Asistence při komunikaci s úřady</li>
-        </ul>
-        <a href="#kontakt" class="btn btn-primary" style="background:#fff;color:var(--navy);box-shadow:none;border:1.5px solid var(--navy)">Mám zájem</a>
+    <!-- POZNÁMKY K CENÍKU -->
+    <div class="pricing-notes reveal" style="margin-top:36px; background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px 32px; box-shadow:var(--shadow);">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
+        <div>
+          <h4 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Poznámka k velikosti flotily
+          </h4>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">
+            Uvedený měsíční paušál (2 500 Kč) platí pro <strong>1–2 vozidla</strong>. V případě většího počtu vozidel se cena řeší individuální kalkulací na míru dle rozsahu administrativy.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-size:15px; font-weight:700; color:var(--navy); margin-bottom:8px; display:flex; align-items:center; gap:8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-600)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Vícepráce a kontroly na vyžádání
+          </h4>
+          <p style="font-size:14px; color:var(--muted); line-height:1.6;">
+            Zastupování při úředních kontrolách (Dopravní úřad / ČOI) či pravidelnou kontrolu dodržování AETR zajišťujeme jako volitelné doplňkové služby.
+          </p>
+        </div>
       </div>
     </div>
   </div>
