@@ -1664,6 +1664,13 @@
     if (form) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        
+        // Native HTML5 validation check for valid email, required fields, etc.
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
         const name = document.getElementById('jmeno').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('telefon').value.trim();
@@ -1674,20 +1681,39 @@
           return;
         }
 
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const origBtnText = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Odesílám…';
+        }
+
         try {
           const response = await fetch('https://formspree.io/f/xjglzdjd', {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
             body: new FormData(form)
           });
+
           if (response.ok) {
             alert('Děkujeme za vaši poptávku! Ozveme se vám nejpozději do 24 hodin.');
             form.reset();
           } else {
-            alert('Nastala chyba při odesílání formuláře. Zkuste to prosím znovu nebo nám zavolejte.');
+            const data = await response.json().catch(() => ({}));
+            if (data.errors && data.errors.length > 0) {
+              const errMsgs = data.errors.map(err => err.message || err.field).join('\n');
+              alert('Zkontolujte prosím zadaná data:\n' + errMsgs);
+            } else {
+              alert('Nastala chyba při odesílání formuláře. Zkuste to prosím znovu nebo nám zavolejte.');
+            }
           }
         } catch (_err) {
           alert('Nastala chyba při spojení se serverem. Zkuste to prosím znovu.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+          }
         }
       });
     }
