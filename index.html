@@ -15,9 +15,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Odpovědný zástupce pro dopravu nad 3,5 t | Eurolicence | Celá ČR</title>
   <meta name="description"
-    content="Odpovědný zástupce pro nákladní dopravu nad 3,5 t. Splnění podmínky odborné způsobilosti a vyřízení Eurolicence po celé ČR korespondenčně. Balíčky od 2 500 Kč/měsíc." />
+    content="Odpovědný zástupce pro dopravu – zajistíme odbornou způsobilost a Eurolicenci pro nákladní autodopravu nad 3,5 t. Garant pro autodopravu a kamionovou dopravu po celé ČR. Balíčky od 2 500 Kč/měsíc." />
   <meta name="keywords"
-    content="odpovědný zástupce doprava, eurolicence, odborná způsobilost nákladní doprava, zástupce pro dopravu, garant dopravy, koncese doprava" />
+    content="
+      odpovědný zástupce pro dopravu,
+      zástupce pro autodopravu,
+      odpovědný zástupce v dopravě,
+      odpovědný zástupce doprava,
+      garant pro autodopravu,
+      garant pro dopravu,
+      garant dopravy,
+      garance dopravy,
+      garant autodoprava,
+      koncese doprava,
+      koncese autodoprava,
+      koncese nákladní doprava,
+      nákladní doprava nad 3,5 tuny,
+      nákladní doprava nad 3,5 t,
+      nákladní autodoprava,
+      kamionová doprava garant,
+      kamionová doprava zástupce,
+      kamionová doprava,
+      odpovědný zástupce kamionová doprava,
+      zástupce pro nákladní dopravu,
+      odborná způsobilost nákladní doprava,
+      odborná způsobilost autodoprava,
+      odborná způsobilost dopravce,
+      eurolicence,
+      eurolicence nákladní doprava,
+      eurolicence autodoprava,
+      eurolicence dopravce,
+      vyřízení eurolicence,
+      licence dopravce,
+      splnění podmínek dopravce,
+      provozování nákladní dopravy,
+      dopravní živnost,
+      dopravní licence,
+      přeprava nákladů nad 3,5t,
+      správce dopravy,
+      manažer dopravy,
+      odpovědná osoba doprava,
+      splnění zákonné podmínky doprava
+    " />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zastupceprodopravu.cz/" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -998,6 +1037,107 @@
       }
     }
 
+    /* FAQ */
+    .faq-section {
+      background: #0d1525;
+      padding: 80px 0;
+    }
+
+    .faq-section .section-head h2 {
+      margin-top: 10px;
+    }
+
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(99,179,237,0.3);
+    }
+
+    .faq-item.open {
+      border-color: rgba(99,179,237,0.4);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 24px;
+      color: #e2e8f0;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      line-height: 1.4;
+    }
+
+    .faq-q:hover {
+      color: #63b3ed;
+    }
+
+    .faq-item.open .faq-q {
+      color: #63b3ed;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, background 0.3s;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: #63b3ed;
+      border-color: #63b3ed;
+      color: #0d1525;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 400px;
+    }
+
+    .faq-a-inner {
+      padding: 0 24px 20px;
+      color: #a8b2c5;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .faq-a-inner strong {
+      color: #e2e8f0;
+    }
+
     /* FOOTER */
     footer {
       background: #0e1628;
@@ -1579,6 +1719,115 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Časté dotazy</p>
+        <h2 id="faq-heading" style="margin-top:10px">Vše, co potřebujete vědět</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Co je odpovědný zástupce pro dopravu a k čemu slouží?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              <strong>Odpovědný zástupce pro dopravu</strong> (také zvaný garant pro dopravu nebo garant autodopravy) je fyzická osoba s odbornou způsobilostí, kterou zákon vyžaduje pro provozování nákladní dopravy nad 3,5 t. Bez zapsaného garanta nelze získat <strong>koncesi na nákladní dopravu</strong> ani <strong>Eurolicenci</strong>. Zástupce nemusí být zaměstnancem firmy – může být smluvně sjednán externě.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Kdo potřebuje zástupce pro autodopravu?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Každý dopravce, který provozuje <strong>nákladní autodopravu nad 3,5 tuny</strong>, musí mít zapsaného odpovědného zástupce v dopravě. Týká se to začínajících dopravců žádajících o koncesi, ale i zavedených firem, které přišly o původního garanta nebo potřebují změnu zápisu. Bez platného garanta hrozí odebrání <strong>dopravní licence</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Jak funguje garant pro autodopravu externě?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Náš <strong>garant pro dopravu</strong> s vámi uzavře smlouvu, nechá se zapsat jako odpovědný zástupce na příslušném dopravním úřadu a splní tak zákonnou podmínku odborné způsobilosti za vaši firmu. Celý proces probíhá <strong>korespondenčně po celé ČR</strong> – není třeba osobní návštěva. Veškerá administrativa ohledně <strong>Eurolicence</strong> a zápisu garanta je v naší režii.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Co je Eurolicence a jak ji získám?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              <strong>Eurolicence</strong> (Licence Společenství) je povolení pro mezinárodní <strong>nákladní dopravu</strong> v rámci EU. Podmínkou jejího získání je mimo jiné zapsaný odpovědný zástupce s platnou odbornou způsobilostí. Pomůžeme vám splnit všechny podmínky a <strong>vyřízení Eurolicence</strong> zařídíme kompletně za vás.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Jaký je rozdíl mezi koncesí a Eurolicencí pro kamionovou dopravu?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              <strong>Koncese na nákladní dopravu</strong> opravňuje k vnitrostátní přepravě nákladů nad 3,5 t v ČR. <strong>Eurolicence pro kamionovou dopravu</strong> je nadstavba umožňující mezinárodní přepravu po EU. Obě vyžadují zapsaného <strong>odpovědného zástupce v dopravě</strong> s doloženou odbornou způsobilostí – právě to je naše specializace.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Jak rychle lze zástupce pro nákladní dopravu zapsat?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Po podpisu smlouvy zpravidla podáme žádost na úřad do <strong>3 pracovních dnů</strong>. Úřad má ze zákona 30 dnů na rozhodnutí, v praxi bývá zápis <strong>garanta pro dopravu</strong> hotový dříve. U urgentních případů (hrozba pozastavení <strong>dopravní živnosti</strong>) komunikujeme s úřadem prioritně.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Kolik stojí garant pro dopravu / odpovědný zástupce?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Nabízíme tři balíčky: <strong>Základ od 2 500 Kč/měsíc</strong> (pouze garant pro dopravu), <strong>Komfort od 3 500 Kč</strong> (včetně poradenství) a <strong>Premium od 5 000 Kč</strong> (kompletní správa a Eurolicence). Cena zahrnuje vše potřebné – žádné skryté poplatky. Garance vrácení peněz pokud zápis neproběhne.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Fungujete i pro kamionovou dopravu a mezinárodní přepravy?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" role="region">
+            <div class="faq-a-inner">
+              Ano. Specializujeme se na <strong>kamionovou dopravu</strong>, <strong>přepravu nákladů nad 3,5 t</strong> i mezinárodní autodopravce potřebující Eurolicenci. Náš <strong>garant pro kamionovou dopravu</strong> má zkušenosti s požadavky tuzemských i zahraničních dopravců a pomůže vám splnit veškeré zákonné podmínky.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -1718,6 +1967,24 @@
         }
       });
     }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        // Open clicked (if it was closed)
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
   </script>
 
 </body>
