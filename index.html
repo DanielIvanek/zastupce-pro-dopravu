@@ -73,53 +73,138 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "ZástupceProDopravu.cz",
-  "description": "Odpovědný zástupce pro nákladní dopravu nad 3,5t, odborná způsobilost a vyřízení Eurolicence po celé ČR korespondenčně.",
-  "url": "https://zastupceprodopravu.cz/",
-  "email": "ivanek.daniel99@gmail.com",
-  "telephone": "+420731751799",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Česká republika"
-  },
-  "priceRange": "2 500 – 5 000 Kč/měsíc",
-  "currenciesAccepted": "CZK",
-  "paymentAccepted": "Bankovní převod",
-  "inLanguage": "cs",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Služby odpovědného zástupce",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Balíček Základ"
-        },
-        "price": "2500",
-        "priceCurrency": "CZK"
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://zastupceprodopravu.cz/#firma",
+      "name": "ZástupceProDopravu.cz",
+      "description": "Odpovědný zástupce pro nákladní dopravu nad 3,5t, odborná způsobilost a vyřízení Eurolicence po celé ČR korespondenčně.",
+      "url": "https://zastupceprodopravu.cz/",
+      "logo": "https://zastupceprodopravu.cz/favicon.svg",
+      "email": "ivanek.daniel99@gmail.com",
+      "telephone": "+420731751799",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Česká republika"
       },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Balíček Standard"
-        },
-        "price": "3500",
-        "priceCurrency": "CZK"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Balíček Premium"
-        },
-        "price": "5000",
-        "priceCurrency": "CZK"
+      "priceRange": "od 2 500 Kč/měsíc",
+      "currenciesAccepted": "CZK",
+      "paymentAccepted": "Bankovní převod",
+      "knowsLanguage": "cs",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Služby odpovědného zástupce",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Garant (Základ)",
+              "description": "Výkon funkce odpovědného zástupce, smlouva, potvrzení pro úřad a roční kontrola finanční způsobilosti."
+            },
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": 2500,
+              "priceCurrency": "CZK",
+              "unitText": "měsíc"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Koncese na klíč + Garant",
+              "description": "Kompletní administrativa pro vydání koncese a Eurolicence a následný výkon funkce odpovědného zástupce."
+            },
+            "priceSpecification": [
+              {
+                "@type": "PriceSpecification",
+                "price": 5000,
+                "priceCurrency": "CZK",
+                "description": "Jednorázové vyřízení"
+              },
+              {
+                "@type": "UnitPriceSpecification",
+                "price": 2500,
+                "priceCurrency": "CZK",
+                "unitText": "měsíc"
+              }
+            ]
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://zastupceprodopravu.cz/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Co je odpovědný zástupce pro dopravu a k čemu slouží?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Odpovědný zástupce pro dopravu (také zvaný garant pro dopravu nebo garant autodopravy) je fyzická osoba s odbornou způsobilostí, kterou zákon vyžaduje pro provozování nákladní dopravy nad 3,5 t. Bez zapsaného garanta nelze získat koncesi na nákladní dopravu ani Eurolicenci. Zástupce nemusí být zaměstnancem firmy – může být smluvně sjednán externě."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kdo potřebuje zástupce pro autodopravu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Každý dopravce, který provozuje nákladní autodopravu nad 3,5 tuny, musí mít zapsaného odpovědného zástupce v dopravě. Týká se to začínajících dopravců žádajících o koncesi, ale i zavedených firem, které přišly o původního garanta nebo potřebují změnu zápisu. Bez platného garanta hrozí odebrání dopravní licence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak probíhá zápis garanta – co všechno potřebuji dodat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Svépomocí: zašleme vám veškeré potřebné dokumenty včetně vyplněných formulářů a přesného návodu. Žádost si pak podáte sami na příslušném dopravním úřadě. Vyřídíme za vás: celou komunikaci s úřadem zajistíme my. Potřebujeme od vás mít připraveny ostatní zákonné podklady – zejména finanční způsobilost, bezúhonnost a provozovnu. Bez jejich splnění nelze žádost podat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co je Eurolicence a jak ji získám?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eurolicence (Licence Společenství) je povolení pro mezinárodní nákladní dopravu v rámci EU. Podmínkou jejího získání je mimo jiné zapsaný odpovědný zástupce s platnou odbornou způsobilostí. Pomůžeme vám splnit všechny podmínky a vyřízení Eurolicence zařídíme kompletně za vás."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jaký je rozdíl mezi koncesí a Eurolicencí pro kamionovou dopravu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Koncese na nákladní dopravu opravňuje k vnitrostátní přepravě nákladů nad 3,5 t v ČR. Eurolicence pro kamionovou dopravu je nadstavba umožňující mezinárodní přepravu po EU. Obě vyžadují zapsaného odpovědného zástupce v dopravě s doloženou odbornou způsobilostí – právě to je naše specializace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak dlouho trvá zápis a co když firma ještě nesplňuje podmínky?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jakmile firma doloží všechny zákonné podmínky (finanční způsobilost, bezúhonnost, provozovna apod.), podáme žádost zpravidla do 3 pracovních dnů. Úřad má ze zákona 30 dnů na rozhodnutí. Pokud firma ještě nesplňuje všechny podmínky, nelze žádost podat dříve – zákon to neumožňuje. V takovém případě vám pošleme přesný přehled chybějících podkladů a počkáme, až je firma zajistí. Teprve pak celý proces spustíme. Žádná zbytečná kolečka – vše vyřešíme co nejrychleji, jakmile jsou podmínky splněny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kolik stojí garant pro dopravu / odpovědný zástupce?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nabízíme dva balíčky. Garant (Základ) za 2 500 Kč/měsíc – výkon funkce odpovědného zástupce, smlouva, potvrzení pro úřad a roční kontrola finanční způsobilosti. Pro firmy, které již koncesi mají a potřebují pouze garanta. Koncese na klíč + Garant – jednorázové vyřízení za 5 000 Kč + měsíční paušál 2 500 Kč. Kompletní administrativa pro vydání koncese a Eurolicence od A do Z, vhodné pro nové dopravce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fungujete i pro kamionovou dopravu a mezinárodní přepravy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Specializujeme se na kamionovou dopravu, přepravu nákladů nad 3,5 t i mezinárodní autodopravce potřebující Eurolicenci. Náš garant pro kamionovou dopravu má zkušenosti s požadavky tuzemských i zahraničních dopravců a pomůže vám splnit veškeré zákonné podmínky."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 
