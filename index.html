@@ -2,23 +2,15 @@
 <html lang="cs">
 
 <head>
-  <!-- Google tag (gtag.js) – analytické cookies až po souhlasu návštěvníka (Consent Mode) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RNSLXQNJC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    var souhlasCookies = null;
-    try { souhlasCookies = localStorage.getItem('cookie-souhlas'); } catch (_e) { }
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: souhlasCookies === 'ano' ? 'granted' : 'denied'
-    });
     gtag('js', new Date());
 
     gtag('config', 'G-7RNSLXQNJC');
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RNSLXQNJC"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Odpovědný zástupce pro dopravu nad 3,5 t | Eurolicence | Celá ČR</title>
@@ -93,6 +85,7 @@
       "@type": "ProfessionalService",
       "@id": "https://zastupceprodopravu.cz/#firma",
       "name": "ZástupceProDopravu.cz",
+      "legalName": "Daniel Ivánek",
       "description": "Odpovědný zástupce pro nákladní dopravu nad 3,5t, odborná způsobilost a vyřízení Eurolicence po celé ČR korespondenčně.",
       "url": "https://zastupceprodopravu.cz/",
       "logo": "https://zastupceprodopravu.cz/favicon.svg",
@@ -1162,7 +1155,6 @@
 
     .faq-section .section-head h2 {
       margin-top: 10px;
-      color: #fff;
     }
 
     .faq-list {
@@ -1332,68 +1324,6 @@
       }
     }
 
-    /* cookie lišta */
-    .cookie-lista {
-      position: fixed;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      z-index: 100;
-      max-width: 720px;
-      margin: 0 auto;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      box-shadow: var(--shadow-lg);
-      padding: 14px 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .cookie-lista[hidden] {
-      display: none
-    }
-
-    .cookie-lista p {
-      flex: 1 1 320px
-    }
-
-    .cookie-lista .tlacitka {
-      display: flex;
-      gap: 8px
-    }
-
-    .cookie-lista button {
-      font: inherit;
-      font-weight: 700;
-      border-radius: 8px;
-      padding: 8px 16px;
-      cursor: pointer;
-      border: 1px solid var(--navy);
-      background: #fff;
-      color: var(--navy)
-    }
-
-    .cookie-lista button.ano {
-      background: var(--navy);
-      color: #fff
-    }
-
-    .odkaz-cookies {
-      background: none;
-      border: 0;
-      padding: 0;
-      font: inherit;
-      color: inherit;
-      text-decoration: underline;
-      cursor: pointer
-    }
-
     /* fade-in on scroll */
     .reveal {
       opacity: 0;
@@ -1494,7 +1424,7 @@
               <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
-            <span><strong>100+ klientů</strong></span>
+            <span><strong>200+ klientů</strong></span>
           </div>
           <div class="trust-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1915,7 +1845,7 @@
   <section class="faq-section" id="faq" aria-labelledby="faq-heading">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow" style="color:var(--gold)">Časté dotazy</span>
+        <p class="eyebrow">Časté dotazy</p>
         <h2 id="faq-heading" style="margin-top:10px">Vše, co potřebujete vědět</h2>
       </div>
       <div class="faq-list">
@@ -2088,6 +2018,7 @@
             <p>E-mail: <a href="mailto:ivanek.daniel99@gmail.com">ivanek.daniel99@gmail.com</a></p>
             <p>Telefon: <a href="tel:+420731751799">+420 731 751 799</a></p>
             <p>Působnost: celá ČR</p>
+            <p>Daniel Ivánek, IČO: 09373446</p>
           </div>
           <div>
             <h3>Rychlé odkazové menu</h3>
@@ -2099,35 +2030,14 @@
         </div>
       </div>
       <div class="foot-bottom">
-        © <span id="year"></span> ZástupceProDopravu.cz · Všechna práva vyhrazena ·
-        <button type="button" class="odkaz-cookies" id="cookie-nastaveni">Nastavení cookies</button>
+        © <span id="year"></span> ZástupceProDopravu.cz · Všechna práva vyhrazena
       </div>
     </div>
   </footer>
 
-  <div class="cookie-lista" id="cookie-lista" role="dialog" aria-label="Souhlas s cookies" hidden>
-    <p>Rádi bychom měřili návštěvnost webu pomocí Google Analytics (analytické cookies). Povolíte to?</p>
-    <div class="tlacitka">
-      <button type="button" id="cookie-ne">Odmítnout</button>
-      <button type="button" class="ano" id="cookie-ano">Povolit</button>
-    </div>
-  </div>
-
   <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Cookie lišta: volba se pamatuje v prohlížeči, Analytics měří jen po souhlasu
-    const cookieLista = document.getElementById('cookie-lista');
-    const ulozSouhlas = (hodnota) => {
-      try { localStorage.setItem('cookie-souhlas', hodnota); } catch (_e) { }
-      gtag('consent', 'update', { analytics_storage: hodnota === 'ano' ? 'granted' : 'denied' });
-      cookieLista.hidden = true;
-    };
-    if (souhlasCookies !== 'ano' && souhlasCookies !== 'ne') cookieLista.hidden = false;
-    document.getElementById('cookie-ano').addEventListener('click', () => ulozSouhlas('ano'));
-    document.getElementById('cookie-ne').addEventListener('click', () => ulozSouhlas('ne'));
-    document.getElementById('cookie-nastaveni').addEventListener('click', () => { cookieLista.hidden = false; });
 
     // Mobile nav toggle
     const navToggle = document.getElementById('nav-toggle');
