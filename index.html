@@ -2107,6 +2107,8 @@
           });
 
           if (response.ok) {
+            // Měření: odeslaná poptávka (Google Analytics)
+            if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_id: 'poptavka', typ_dopravy: typ });
             alert('Děkujeme za vaši poptávku! Ozveme se vám nejpozději do 24 hodin.');
             form.reset();
           } else {
@@ -2128,6 +2130,13 @@
         }
       });
     }
+
+    // Měření: kliknutí na telefon a e-mail (Google Analytics)
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+      if (!link || typeof gtag !== 'function') return;
+      gtag('event', link.href.startsWith('tel:') ? 'click_phone' : 'click_email', { link_location: link.closest('section, footer, header, nav')?.id || '' });
+    });
 
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {
